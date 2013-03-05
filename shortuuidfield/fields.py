@@ -18,7 +18,7 @@ class ShortUUIDField(CharField):
             # Do not let the user edit UUIDs if they are auto-assigned.
             kwargs['editable'] = False
             kwargs['blank'] = True
-            kwargs['unique'] = True
+           # kwargs['unique'] = True  # if you want to be paranoid, set unique=True in your instantiation of the field.
 
         super(ShortUUIDField, self).__init__(*args, **kwargs)
 

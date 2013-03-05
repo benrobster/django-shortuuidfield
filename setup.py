@@ -2,12 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-shortuuidfield',
-    version='0.1.0',
+    version='0.1.2',
     author='Ben Roberts',
     author_email='roberts81@gmail.com',
-    author_email='roberts81@gmail.com',
-    description='Short UUIDField in Django',
-    url='https://github.com/roberts/django-shortuuidfield',
+    description='Short UUIDField for Django.  Good for use in urls & file names.  (Base 57, 22 characters)',
+    url='https://github.com/nebstrebor/django-shortuuidfield',
     zip_safe=False,
     install_requires=[
         'django',
