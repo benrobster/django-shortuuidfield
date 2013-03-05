@@ -1,22 +1,19 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='django-uuidfield',
-    version='0.4.0',
-    author='David Cramer',
-    author_email='dcramer@gmail.com',
-    description='UUIDField in Django',
-    url='https://github.com/dcramer/django-uuidfield',
+    name='django-shortuuidfield',
+    version='0.1.0',
+    author='Ben Roberts',
+    author_email='roberts81@gmail.com',
+    author_email='roberts81@gmail.com',
+    description='Short UUIDField in Django',
+    url='https://github.com/roberts/django-shortuuidfield',
     zip_safe=False,
     install_requires=[
         'django',
-    ],
-    tests_require=[
-        'psycopg2',
-        'django-nose',
+        'shortuuid'
     ],
     packages=find_packages(),
-    test_suite='runtests.runtests',
     include_package_data=True,
     classifiers=[
         "Framework :: Django",

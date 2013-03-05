@@ -1,25 +1,25 @@
-django-uuidfield
+django-shortuuidfield
 ----------------
 
-Provides a UUIDField for your Django models.
+Provides a ShortUUIDField for your Django models which uses the base-57 "Short UUID" package at https://github.com/stochastic-technologies/shortuuid/ .
+
+Originally, a fork from David Cramer's excellent django-uuidfield, but not much is left of that besides a bit of structure.
 
 Installation
 ============
 
 Install it with pip (or easy_install)::
 
-	pip install django-uuidfield
+	pip install django-shortuuidfield
 
 Usage
 =====
 
-First you'll need to attach a UUIDField to your class. This acts as a char(32) to maintain compatibility with SQL versions::
+First you'll need to attach a ShortUUIDField to your class. This acts as a char(22) to maintain compatibility with SQL versions::
 
-	from uuidfield import UUIDField
+	from shortuuidfield import ShortUUIDField
 	
 	class MyModel(models.Model):
-	    uuid = UUIDField(auto=True)
-
-Check out the source for more configuration values.
+	    uuid = ShortUUIDField(auto=False)
 
 Enjoy!
