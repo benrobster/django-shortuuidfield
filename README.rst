@@ -20,6 +20,6 @@ First you'll need to attach a ShortUUIDField to your class. This acts as a char(
 	from shortuuidfield import ShortUUIDField
 	
 	class MyModel(models.Model):
-	    uuid = ShortUUIDField(auto=False)
+	    uuid = ShortUUIDField()
 
 Enjoy!
