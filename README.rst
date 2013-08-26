@@ -23,3 +23,14 @@ First you'll need to attach a ShortUUIDField to your class. This acts as a char(
 	    uuid = ShortUUIDField()
 
 Enjoy!
+
+Notes
+=====
+
+* ShortUUIDField is a subclass of django.db.models.CharField
+
+* You can pass usual Django CharField parameters on init, although some of them are added/overwritten: 
+    + max_length=22 (since we are using base-57 format which is fixed at 22 characters)
+    + blank=True, editable=False (set auto=False to remove these fields enforcement)
+
+* Uses shortuuid.uuid() that generates uuid4 random values
