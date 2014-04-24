@@ -1,6 +1,7 @@
 import shortuuid
 from django.db.models import CharField
-
+from __future__ import unicode_literals
+from future.builtins import str
 
 class ShortUUIDField(CharField):
     """
@@ -30,7 +31,7 @@ class ShortUUIDField(CharField):
         value = super(ShortUUIDField, self).pre_save(model_instance, add)
         if self.auto and not value:
             # Assign a new value for this attribute if required.
-            value = unicode(shortuuid.uuid())
+            value = str(shortuuid.uuid())
             setattr(model_instance, self.attname, value)
         return value
 

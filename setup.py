@@ -10,7 +10,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'django',
-        'shortuuid'
+        'shortuuid',
+        'future'
     ],
     packages=find_packages(),
     include_package_data=True,
