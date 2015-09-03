@@ -1,4 +1,5 @@
 import shortuuid
+import six
 import sys
 from django.db.models import CharField
 
@@ -31,10 +32,7 @@ class ShortUUIDField(CharField):
         value = super(ShortUUIDField, self).pre_save(model_instance, add)
         if self.auto and not value:
             # Assign a new value for this attribute if required.
-            if sys.version_info < (3, 0):
-                value = unicode(shortuuid.uuid())
-            else:
-                value = str(shortuuid.uuid())
+            value = six.text_type(shortuuid.uuid())
             setattr(model_instance, self.attname, value)
         return value
 
